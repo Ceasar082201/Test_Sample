@@ -1,0 +1,60 @@
+package sample;
+
+import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.HashMap;
+import java.util.Scanner;
+class Sam {
+
+  public static void main(String[] args) {
+   Scanner bj = new Scanner(System.in); //Create a Scanner Obj
+   LocalDateTime oras = LocalDateTime.now(); //For Time Obj
+   HashMap<String,String>bnsa = new HashMap<String, String>();//For Country
+   
+   bnsa.put("Region-V","Bicol");
+   bnsa.put("Albay","Legazpi");
+   bnsa.put("Daraga","Sagpon");
+   bnsa.put("Camalig","Tagaytay");
+   bnsa.put("Guinobatan","Mauraro");
+   
+   System.out.println(bnsa);
+   
+   
+   ArrayList<String>hbbs = new ArrayList<String>(); //For hbbs
+   
+   hbbs.add("Anime");
+   hbbs.add("Soc Media");
+   hbbs.add("Exercise");
+   hbbs.add("JAV");
+   hbbs.add("Reading Hiragana & Katakana");
+   hbbs.add("Playing PSP Games");
+   hbbs.add("Listening on SPOTIFY");
+   hbbs.add("Practicing previous Activities in one program");
+   hbbs.add("Learning Japanese");
+   
+   
+   Collections.sort(hbbs);
+   
+   for (String i : hbbs){
+     System.out.println(i);
+   }
+   
+   
+   
+   System.out.print("Name:");
+   String User = bj.nextLine();//Read User's Input
+   System.out.print("Age:");
+   int age = bj.nextInt();//Read Users Input
+   
+   
+   
+   System.out.println("Username " + User + age); //Displays the Output
+   System.out.println(oras); // Displays the Output(2)
+   DateTimeFormatter oras2 = DateTimeFormatter.ofPattern("E, MMM dd yyyy HH:MM:SS");
+   String oras3 = oras.format(oras2); //For Output(3)
+   System.out.print("Date & Time:" + oras3); // Diaplays the Ouput(3)
+  
+  }
+}
